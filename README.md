@@ -1,57 +1,56 @@
+# Laboratorio 3
 
-Después de la estructura del proyecto, agrega esto:
+### Laboratorio de Desarrollo Web - HTML5, Bootstrap y PHP
 
-```markdown
-## Funcionamiento del Sistema
+**Estudiante:** Ambar Greco
 
-El sistema permite registrar la información de un aspirante mediante un formulario ubicado en `index.php`.
-
-Los datos son enviados utilizando el método POST hacia el archivo `procesar.php`, donde se realizan las validaciones correspondientes antes de procesar y mostrar la información.
-
-El formulario también permite subir una fotografía del aspirante mediante el atributo `multipart/form-data`.
+**Profesora:** Irina Fong
 
 ---
 
-## Validaciones realizadas
+## Descripción del Laboratorio
 
-Durante el procesamiento de los datos se implementaron diferentes validaciones para garantizar el correcto funcionamiento del sistema.
+En este laboratorio se desarrolló un sistema web para el registro de aspirantes utilizando HTML5, Bootstrap y PHP.
 
-- Validación de campos obligatorios.
-- Validación de datos desde el servidor utilizando PHP.
-- Uso de `htmlspecialchars()` para evitar la interpretación de código HTML ingresado por el usuario.
-- Validación de la fotografía subida por el aspirante.
-- Validación de extensiones de imagen permitidas como JPEG, PNG y GIF.
-- Almacenamiento de las fotografías en la carpeta `uploaded_files`.
-- Normalización y procesamiento de los datos antes de mostrarlos.
+El objetivo principal fue crear una aplicación capaz de recibir información mediante un formulario, procesar los datos ingresados y aplicar diferentes validaciones para garantizar que la información sea correcta y segura.
+
+El formulario solicita datos como nombre, apellido, identificación, fecha de nacimiento, sexo y fotografía del aspirante. Posteriormente, la información es enviada a un archivo PHP encargado de validar, limpiar, normalizar y procesar los datos antes de mostrar el resultado correspondiente.
 
 ---
 
-## Organización mediante Includes
+## Tecnologías utilizadas
 
-Para evitar repetir código y mantener una estructura más organizada, se utilizaron archivos PHP externos mediante `include`.
+Para el desarrollo de este laboratorio se utilizaron diferentes herramientas y tecnologías relacionadas con el desarrollo web frontend y backend.
 
-El archivo `header.php` contiene la parte superior de la página y la navegación del sistema.
+**Visual Studio Code:** se utilizó como editor de código para crear, modificar y organizar los diferentes archivos que forman parte del proyecto.
 
-El archivo `footer.php` contiene el pie de página.
+**HTML5:** se utilizó para crear la estructura principal de las páginas web y del formulario de registro, utilizando etiquetas semánticas como `header`, `main`, `section` y `footer`.
 
-Estos archivos pueden reutilizarse en diferentes páginas del proyecto, facilitando el mantenimiento del código.
+**CSS3:** se utilizó como apoyo para la presentación visual de algunos elementos de la página y la organización del contenido.
 
----
+**Bootstrap:** se utilizó para mejorar la apariencia del sistema, facilitar la creación de una interfaz adaptable y aplicar estilos a formularios, botones, navegación y otros elementos visuales.
 
-## Seguridad
+**PHP:** se utilizó para procesar la información enviada desde el formulario, realizar validaciones, aplicar funciones de seguridad y manejar la carga de archivos.
 
-Se aplicaron medidas básicas de seguridad durante el procesamiento de la información.
+**Navegador Web:** se utilizó para visualizar y comprobar el funcionamiento del sistema durante el desarrollo.
 
-La función `htmlspecialchars()` permite convertir caracteres especiales en entidades HTML, evitando que código introducido en el formulario sea interpretado directamente por el navegador.
-
-También se realizó una validación del tipo de archivo permitido antes de almacenar las fotografías en el servidor.
+**GitHub:** se utilizó como repositorio en línea para almacenar, organizar y compartir los archivos correspondientes al laboratorio.
 
 ---
 
-## Conclusión
+## Estructura del Proyecto
 
-El desarrollo de este laboratorio permitió aplicar conocimientos de HTML5, Bootstrap y PHP para construir una aplicación web capaz de recibir y procesar información.
+El proyecto fue organizado en diferentes archivos y carpetas con el objetivo de mantener una estructura clara y modular.
 
-Además, se trabajó con formularios, validaciones del lado del servidor, carga de archivos, organización mediante carpetas e includes y medidas básicas de seguridad.
-
-Finalmente, el proyecto fue organizado y almacenado en un repositorio de GitHub, permitiendo mantener el código fuente documentado y accesible.
+```text
+Laboratorio-3-Desarrollo-Web/
+│
+├── includes/
+│   ├── header.php
+│   └── footer.php
+│
+├── uploaded_files/
+│
+├── index.php
+├── procesar.php
+└── README.md
